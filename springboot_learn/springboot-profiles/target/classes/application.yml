@@ -1,0 +1,29 @@
+---
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+server:
+  port: 8082
+spring:
+  config:
+    activate:
+      on-profile: test
+---
+server:
+  port: 8083
+spring:
+  config:
+    activate:
+      on-profile: pro
+#从 Spring Boot 2.4 版本开始，指定配置文件的方式已更改。Spring Boot 2.4 版本之前的指定配置文件的方式如下
+#spring:
+#    profiles: dev or test....
+--- #指定使用哪个文档
+spring:
+  profiles:
+    active: pro
